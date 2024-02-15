@@ -6,7 +6,7 @@ const PostList = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(()=>{
-    const response = fetch('http://localhost:4000/post', {credentials:'include'}).then(response =>{
+    const response = fetch('https://blog-mern-9cip.onrender.com/post', {credentials:'include'}).then(response =>{
       response.json().then(post=>{
        // console.log(post)
         setPosts(post);
