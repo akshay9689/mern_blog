@@ -22,7 +22,7 @@ const fs = require('fs');
 //exp.use(express.static('uploads'));
 exp.use('/uploads',express.static(__dirname+'/uploads'))
 
-exp.use(cors({credentials:true,origin:'https://blog-frontend-hce6.onrender.com'}));
+exp.use(cors({credentials:true,origin:'*'}));
 exp.use(express.json())
 exp.use(cookieparser())
 mongoose.connect('mongodb+srv://blog:cPnR039pVgOEfd1p@cluster0.6ghps9h.mongodb.net/?retryWrites=true&w=majority')
