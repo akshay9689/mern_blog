@@ -27,15 +27,6 @@ exp.use(express.json())
 exp.use(cookieparser())
 mongoose.connect('mongodb+srv://blog:cPnR039pVgOEfd1p@cluster0.6ghps9h.mongodb.net/?retryWrites=true&w=majority')
 
-exp.use(function(req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  next();
-});
-
-
 exp.get('/post', async(req,res) =>{
 
     res.json(
