@@ -9,7 +9,7 @@ const Header = () => {
 
     useEffect(()=>{
     
-        fetch('http://localhost:4000/profile',{
+        fetch('https://blog-mern-9cip.onrender.com/profile',{
             credentials:'include',
         }).then(response =>{
             response.json().then(userInfo =>{
@@ -22,7 +22,7 @@ const Header = () => {
 
     function logout(){
 
-        fetch('http://localhost:4000/logout',{
+        fetch('https://blog-mern-9cip.onrender.com/logout',{
         credentials:'include',
         method:'POST',
         })
