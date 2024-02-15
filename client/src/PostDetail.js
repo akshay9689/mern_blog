@@ -10,7 +10,7 @@ const PostDetail = () => {
     const {id} = useParams();
     useEffect(()=>{
         
-        fetch('http://localhost:4000/post/'+id).then(response=>{
+        fetch('https://blog-mern-9cip.onrender.com/post/'+id).then(response=>{
             response.json().then(postInfo =>{
              setPostInfo(postInfo);
             })
@@ -35,7 +35,7 @@ if(!postInfo) return '';
                         <div className="card-body">
                         <h4>{postInfo.title}</h4>
                         <h4>Post By {postInfo.author.username}</h4>
-                        <img src={`http://localhost:4000/${postInfo.cover}`}/>
+                        <img src={`https://blog-mern-9cip.onrender.com/${postInfo.cover}`}/>
                         <div dangerouslySetInnerHTML={{__html:postInfo.content}}/>
                         
                         </div>

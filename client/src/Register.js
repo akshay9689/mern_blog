@@ -7,7 +7,7 @@ const Register = () => {
 
     async function register(ev){
         ev.preventDefault();
-       const response = await fetch('http://localhost:4000/register',{
+       const response = await fetch('https://blog-mern-9cip.onrender.com/register',{
        method: 'POST',
        body:JSON.stringify({username, password}),
        headers: {'Content-Type':'application/json'}

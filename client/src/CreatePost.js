@@ -20,7 +20,7 @@ const CreatePost = () => {
     data.set('file', file[0])
     ev.preventDefault();
 
-    const response = await fetch('http://localhost:4000/post',{
+    const response = await fetch('https://blog-mern-9cip.onrender.com/post',{
         method: 'POST',
         body: data,
         credentials: 'include'
